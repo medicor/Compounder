@@ -1,0 +1,41 @@
+
+import { Button, VerticalBox, HorizontalBox, AboutSlint } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in-out property <int> counter: 42;
+    callback change_counter;
+    // function setValue() {
+    //      counter= 1337;
+    // }
+    // width:  640px;
+    // height: 480px;
+    VerticalBox {
+        // alignment: LayoutAlignment.center;
+        Text {
+            text: "Counter: \{root.counter}";
+        }
+        HorizontalBox {
+            // alignment: LayoutAlignment.start;
+            Button {
+                text: "+";
+                clicked => {
+                    //root.request_increase();
+                    //setValue();
+                    root.counter += 1;
+                }
+            }
+            Button {
+                text: "Decrease";
+                clicked => {
+                    //root.request_increase();
+                    //setValue();
+                    root.counter -= 1;
+                }
+            }
+        }
+        AboutSlint {
+            opacity: 0.5;
+            preferred-height: 100px;
+        }
+    }
+}

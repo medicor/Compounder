@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type":"cppvsdbg",
+            "request": "launch",
+            "program": "target/debug/${workspaceRootFolderName}.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build"
+        },
+        // {
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "name": "Run LLDB",
+        //     "cargo": {
+        //         "args": [
+        //             "build"
+        //         ]
+        //     },
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}"
+        // }
+    ]
+}
